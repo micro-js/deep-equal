@@ -15,6 +15,8 @@ test('shallow', function (t) {
   t.ok(equal(1, 1))
   t.notOk(equal([1, 2], {a: 1}))
   t.notOk(equal(1, 2))
+  t.notOk(equal({a: 'test'}, {a: 'test2'}))
+  t.ok(equal({a: NaN}, {a: NaN}))
   t.ok(equal(undefined, undefined))
   t.notOk(equal(null, undefined))
 
